@@ -2,13 +2,13 @@
   "name": "apollo-codegen",
   "version": "0.17.2",
   "description": "Generate API code or type annotations based on a GraphQL schema and query documents",
-  "main": "./lib/index.js",
-  "bin": "./lib/cli.js",
+  "main": "./src/index.js",
+  "bin": "./src/cli.js",
   "scripts": {
     "clean": "rm -rf lib",
     "compile": "tsc",
     "watch": "tsc -w",
-    "prepare": "npm run clean && npm run compile",
+    "prepublish": "npm run clean && npm run compile",
     "test": "./node_modules/.bin/jest",
     "test:smoke": "rm -rf node_modules && npm install --prod && node ./lib/cli.js && echo 'Smoke Test Passed'"
   },
